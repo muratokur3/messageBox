@@ -1,7 +1,7 @@
 setTimeout(() => {
   let btnWhatsapp = document.getElementById("btnOnlMsg");
   btnWhatsapp.style.visibility = "visible";
-}, 1000);
+}, 3000);
 
 const openMessageBox = () => {
   let messageBox = document.getElementById("messageBox");
@@ -12,11 +12,24 @@ const openMessageBox = () => {
   messageCount=messages.length;
 };
 
+const openMessageBoxAdmin = () => {
+    let messageBox = document.getElementById("messageBoxAdmin");
+    let btnOnlMsg = document.getElementById("btnOnlMsgAdmin");
+    btnOnlMsg.style.visibility = "hidden";
+    messageBox.style.visibility = "visible";
+  };
+  
+
 const closeMessageBox = () => {
   document.getElementById("messageBox").style.visibility = "hidden";
   document.getElementById("btnOnlMsg").style.visibility = "visible";
   messageCount=messages.length;
 };
+
+const closeMessageBoxAdmin = () => {
+    document.getElementById("messageBoxAdmin").style.visibility = "hidden";
+    document.getElementById("btnOnlMsgAdmin").style.visibility = "visible";
+  };
 
 let messages = [
   {
@@ -84,9 +97,11 @@ const sendMessage = () => {
 const sendMessageAdmin = () => {
   let messageTextAdmin = document.getElementById("txtMessageAdmin");
   messages.push({ userName: "Admin", messageText: messageTextAdmin.value });
+  if (document.getElementById("messageBox").style.visibility!="visible" && messages.length > messageCount) {
   
-  document.getElementById("messageAlert").style.visibility="visible"
-  document.getElementById("messageAlert").innerHTML=messageTextAdmin.value;
+    document.getElementById("messageAlert").style.visibility="visible"
+    document.getElementById("messageAlert").innerHTML=messageTextAdmin.value;
+}
   messageResetAndWriting();
   messageTextAdmin.value = "";
 };
@@ -119,7 +134,7 @@ setInterval(() => {
     {messageAlert.style.visibility = "visible";}
     else messageAlert.style.visibility = "hidden";
   }
-}, 3000);
+}, 5000);
 
 messageResetAndWriting();
 
