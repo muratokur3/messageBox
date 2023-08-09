@@ -72,12 +72,6 @@ const messagess = (messages) => {
   });
 };
 
-const showMessage = () => {
-  let btnWhatsappMessage = document.getElementById("whatsappMessage");
-  setTimeout(() => {
-    btnWhatsappMessage.style.visibility = "visible";
-  }, 300);
-};
 
 const messageResetAndWriting = () => {
   document.getElementById("messageBoxContent").innerHTML = "";
@@ -139,3 +133,18 @@ setInterval(() => {
 messageResetAndWriting();
 
 
+const textInput = document.getElementById('txtMessage');
+    
+textInput.addEventListener('keyup', function(event) {
+  if (event.key === 'Enter') {
+    sendMessage();
+  }
+});
+
+const textInputAdmin = document.getElementById('txtMessageAdmin');
+    
+textInputAdmin.addEventListener('keyup', function(event) {
+  if (event.key === 'Enter') {
+    sendMessageAdmin();
+  }
+});
