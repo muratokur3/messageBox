@@ -1,0 +1,70 @@
+#messageBoxAdmin{
+    width: 40vw;
+    height: 60vh;
+    background-color: whitesmoke;
+    border-radius: 50px;
+    color: white;
+    font-size:medium;
+    position: fixed;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+  background-color: bisque;
+}
+#messageBoxControlAdmin{
+  background-color: orange;
+  width: 100%;
+  height: 10%;
+  border: none;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 1.2rem;
+  
+
+}
+
+#messageBoxControlAdmin button{
+  width: 40px;
+  height: 40px;
+  font-size: large;
+    background: rgba(19, 19, 19, 0.084);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0 auto;
+  cursor: pointer;
+  
+  
+}
+#messageBoxControlAdmin button:hover{
+  
+  background: rgba(19, 19, 19, 0.300);
+}
+  #messageBoxContentAdmin{
+    padding: 5%;
+  width: 100%;
+  height: 83%;
+  display: flex;
+  flex-direction: column;
+  
+
+  }
+  #txtMessageAdmin{
+    width: 80%;
+    height: 80%;
+    border-radius: 50px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: none;
+    font-size: 1.5rem;
+    padding: 2% 0% 0% 6%;
+  }
+
+  
+  
