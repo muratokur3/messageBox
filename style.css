@@ -134,31 +134,49 @@ overflow-y: scroll;
   background-color: green;
   color: white;
   text-align: center;
-  text-decoration: none;
   display: flex;
   flex-direction: row;
-  padding: 1%;
-  align-items: center;
+  padding: 2%;
+  align-items:center;
+  justify-content: space-around;
 }
-
-#txtMessage{
-  width: 80%;
-  height: 80%;
-  border-radius: 50px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border: none;
-  font-size: 1.5rem;
-  padding: 2% 0% 0% 6%;
-}
-#btnSend{
-  width: 20%;
+#btnEmoji{
+  width: 10%;
   height: 80%;
   border-radius: 50px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   border: none;
-  background-color:white;
+  background: none;
+  cursor: pointer;
+}
+#btnPlus{
+  width: 10%;
+  height: 80%;
+  border-radius: 50px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#txtMessage{
+  width: 65%;
+  height: 80%;
+  border-radius: 1900px;
+  border: none;
+  font-size: 1.1rem;
+  padding: 1.5% 0% 0% 3%;
+}
+#btnSend{
+  width: 10%;
+  height: 80%;
+  border-radius: 50px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border: none;
+  background: none;
   cursor: pointer;
 }
 

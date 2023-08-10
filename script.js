@@ -1,7 +1,7 @@
 setTimeout(() => {
   let btnWhatsapp = document.getElementById("btnOnlMsg");
   btnWhatsapp.style.visibility = "visible";
-}, 3000);
+}, 1000);
 
 const openMessageBox = () => {
   let messageBox = document.getElementById("messageBox");
@@ -74,30 +74,49 @@ const messagess = (messages) => {
 
 
 const messageResetAndWriting = () => {
-  document.getElementById("messageBoxContent").innerHTML = "";
+ 
+  const messageboxcontentadmin = document.getElementById("messageBoxContentAdmin");
+  const messageboxcontent = document.getElementById("messageBoxContent");
+   messageboxcontent.innerHTML = "";
   document.getElementById("messageBoxContentAdmin").innerHTML = "";
   messagessAdmin(messages);
   messagess(messages);
+  messageboxcontentadmin.scrollTop = messageboxcontentadmin.scrollHeight;
+  messageboxcontent.scrollTop = messageboxcontent.scrollHeight;
+
 };
 
 const sendMessage = () => {
-    let messageText = document.getElementById("txtMessage");
-    messages.push({ userName: "Murat", messageText: messageText.value });
+  
+  let messageText = document.getElementById("txtMessage");
+    if(messageText.value!="")
+    {
+       messages.push({ userName: "Murat", messageText: messageText.value });
     messageText.value = "";
     messageResetAndWriting();
+    }
+   
   };
   
 
 const sendMessageAdmin = () => {
+
   let messageTextAdmin = document.getElementById("txtMessageAdmin");
+  if (messageTextAdmin.value!="") {
+     const messageboxcontentadmin = document.getElementById("messageBoxContentAdmin");
+  const messageboxcontent = document.getElementById("messageBoxConten");
   messages.push({ userName: "Admin", messageText: messageTextAdmin.value });
   if (document.getElementById("messageBox").style.visibility!="visible" && messages.length > messageCount) {
-  
     document.getElementById("messageAlert").style.visibility="visible"
     document.getElementById("messageAlert").innerHTML=messageTextAdmin.value;
 }
   messageResetAndWriting();
   messageTextAdmin.value = "";
+  messageboxcontentadmin.scrollTop = messageboxcontentadmin.scrollHeight;
+  messageboxcontent.scrollTop = messageboxcontent.scrollHeight;
+
+  }
+ 
 };
 
 const messagessAdmin = (messages) => {
@@ -145,6 +164,10 @@ const textInputAdmin = document.getElementById('txtMessageAdmin');
     
 textInputAdmin.addEventListener('keyup', function(event) {
   if (event.key === 'Enter') {
+  
     sendMessageAdmin();
   }
 });
+
+
+

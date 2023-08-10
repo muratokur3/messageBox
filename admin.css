@@ -14,11 +14,11 @@
 
 }
 ::-webkit-scrollbar {
-  width: 12px; /* Dikey çubuk genişliği */
+  width: 3px; /* Dikey çubuk genişliği */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color:white; /* Çubuk rengi */
+  background-color:green; /* Çubuk rengi */
   border-radius: 6px; /* Çubuk köşe yuvarlama */
 }
 #messageBoxAdmin{
@@ -78,15 +78,12 @@
 
   }
   #txtMessageAdmin{
-    width: 80%;
+    width: 65%;
     height: 80%;
-    border-radius: 50px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-radius: 1900px;
     border: none;
-    font-size: 1.5rem;
-    padding: 2% 0% 0% 6%;
+    font-size: 1.1rem;
+    padding: 1.5% 0% 0% 3%;
   }
 
-  
   
